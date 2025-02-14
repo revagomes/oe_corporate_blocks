@@ -1,0 +1,7 @@
+services:
+  oe_corporate_blocks.commands:
+    class: \Drupal\oe_corporate_blocks\Commands\CorporateBlocksCommands
+    arguments:
+      - '@oe_corporate_blocks.local_translations_batcher'
+    tags:
+      - { name: drush.command }

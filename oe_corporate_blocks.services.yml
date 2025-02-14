@@ -2,3 +2,14 @@ services:
   oe_corporate_blocks.footer_link_manager:
     class: Drupal\oe_corporate_blocks\FooterLinkManager
     arguments: ['@entity_type.manager']
+  oe_corporate_blocks.local_translations_batcher:
+    class: Drupal\oe_corporate_blocks\LocalTranslationsBatcher
+    arguments:
+      - '@module_handler'
+      - '@theme_handler'
+      - '@language_manager'
+      - '@extension.list.module'
+      - '@extension.list.theme'
+      - '@extension.list.profile'
+      - '@file_system'
+
